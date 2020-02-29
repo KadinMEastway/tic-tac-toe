@@ -10,10 +10,13 @@ export const Functions = {
 	}
 }
 
+/** accept a line of user input */
 export const input = (...message: any[]) => Functions.input(...message);
 
+/** logs a line of text out to the user */
 export const log = (...message: any[]) => Functions.log(...message);
 
+/** accept a number from the user within the requested range */
 export async function inputWithinRange(
 	min = 0,
 	max = Number.POSITIVE_INFINITY,
@@ -32,6 +35,7 @@ export async function inputWithinRange(
 	return userInput;
 }
 
+/** have the user select an option from the provided options */
 export async function selectOption(message: string, option: string[]): Promise<string> {
 	message += '\n';
 	for (let i = 0; i < option.length; i++) {
@@ -43,6 +47,7 @@ export async function selectOption(message: string, option: string[]): Promise<s
 	return option[await inputWithinRange(1, option.length) - 1];
 }
 
+/** accept an input from the user and have them confirm their answer */
 export async function confirmInput(message?: string): Promise<string> {
 	let confirmed = false;
 	let userInput = '';
