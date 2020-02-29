@@ -21,9 +21,11 @@ $monokai-orange: #FD971F;
 			background-color: transparent;
 			border: 0;
 			color: inherit;
+			font-family: Courier;
 			font-size: inherit;
 			margin: 0;
 			padding: 0.5em;
+			white-space: pre;
 			width: 100%;
 
 			&.user {
