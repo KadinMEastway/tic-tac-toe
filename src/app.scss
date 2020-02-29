@@ -1,0 +1,90 @@
+$monokai-grey: #272822;
+$monokai-pink: #F92672;
+$monokai-blue: #66D9EF;
+$monokai-green: #A6E22E;
+$monokai-orange: #FD971F;
+
+.app {
+	bottom: 0;
+	left: 0;
+	font-size: 16px;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	.content {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0);
+
+		.message {
+			background-color: transparent;
+			border: 0;
+			color: inherit;
+			font-size: inherit;
+			margin: 0;
+			padding: 0.5em;
+			width: 100%;
+
+			&.user {
+				padding-top: 0;
+			}
+
+			&:focus {
+				outline: 0;
+			}
+		}
+	}
+
+	.theme-input {
+		position: absolute;
+		left: 0.5em;
+		top: 0.5em;
+
+		label {
+			line-height: 2em;
+			margin-right: 0.5em;
+		}
+
+		select {
+			background-color: transparent;
+			border: 1px solid;
+			border-radius: 0;
+			color: inherit;
+			padding: 0.5em;
+			-webkit-appearance: none;
+
+			&:focus {
+				outline: 0;
+			}
+		}
+	}
+
+	// themes
+	&.dark {
+		background-color: #303030;
+		color: rgba(255, 255, 255, 0.7);
+
+		.messages .system {
+			color: $monokai-orange;
+		}
+	}
+
+	&.light {
+		background-color: #EEE;
+		color: #000;
+
+		.messages .system {
+			color: #3f51b5;
+		}
+	}
+
+	&.monokai {
+		background-color: $monokai-grey;
+		color: $monokai-green;
+
+		.messages .system {
+			color: $monokai-blue;
+		}
+	}
+}
